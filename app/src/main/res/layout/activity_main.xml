@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".main.MainActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.example.magicapps.main.MainViewModel" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.app.view.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/tv_login"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="@string/login"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp_30"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.app.view.CustomEditText
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/dp_30"
+            app:layout_constraintTop_toBottomOf="@id/tv_login"
+            android:layout_marginTop="@dimen/dp_30"
+            android:textColor="@color/black"
+            android:hint="@string/user_name"
+            android:singleLine="true"
+            android:id="@+id/edt_user_name"
+            android:textColorHint="@color/black"
+            android:paddingLeft="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_height="wrap_content"/>
+
+        <com.app.view.CustomEditText
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/dp_30"
+            app:layout_constraintTop_toBottomOf="@id/edt_user_name"
+            android:layout_marginTop="@dimen/dp_20"
+            android:textColor="@color/black"
+            android:hint="@string/password"
+            android:singleLine="true"
+
+            android:id="@+id/edt_password"
+            android:textColorHint="@color/black"
+            android:inputType="number"
+            android:paddingLeft="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_height="wrap_content"/>
+
+        <com.app.view.CustomTextView
+            android:layout_width="match_parent"
+            android:padding="@dimen/dp_15"
+            android:text="@string/login"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_30"
+            app:layout_constraintTop_toBottomOf="@id/edt_password"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:textSize="@dimen/dp_18"
+            android:textColor="@color/white"
+            android:onClick="@{(v) -> viewModel.loginMethod(edtUserName.getText().toString(),edtPassword.getText().toString())}"
+
+            android:background="@color/yellow"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

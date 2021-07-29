@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+         android:padding="@dimen/dp_10"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:id="@+id/tv_name"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            android:id="@+id/tv_ok"
+            android:text="@string/ok"
+            android:gravity="center"
+            android:textSize="@dimen/sp_15"
+            android:padding="@dimen/dp_5"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/sp_30"
+            android:layout_marginLeft="@dimen/dp_30"
+              android:background="@color/yellow"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>
+
